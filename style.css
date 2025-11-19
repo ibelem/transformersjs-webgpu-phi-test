@@ -17,6 +17,31 @@
           font-style: italic;
         }
 
+        .pass {
+          padding: 1px 8px;
+          background-color: green;
+          color: white;
+          border-radius: 10px;
+          margin-left: 4px;
+          font-size: 9px;
+        }
+
+        .error {
+          padding: 1px 8px;
+          background-color: red;
+          color: white;
+          border-radius: 10px;
+          margin-left: 4px;
+          font-size: 9px;
+        }
+
+        .log {
+          padding: 1rem;
+          border: 1px solid red;
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 0.7rem;
+        }
+
         #result {
           margin-top: 0.5rem;
         }
