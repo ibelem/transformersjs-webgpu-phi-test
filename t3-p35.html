@@ -7,34 +7,40 @@
 
 <body>
   <h3>Transformers.js 3.7.6 / ORT Web 1.22.0-dev.20250409 / Phi-3.5-mini-instruct-onnx-web</h3>
-  <div>
-    Result: <div id="result"></div>
-  </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Transformers.js</th>
-                <th>ONNX Runtime Web</th>
-                <th colspan="3">WebGPU - Phi Mini Test</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>3.7.6</td>
-                <td>1.22.0-dev.20250409-89f8206ba4 (Legacy JSEP)</td>
-                <td><a href='t3-p35.html' title="onnx-community/Phi-3.5-mini-instruct-onnx-web">Phi-3.5-mini-instruct-onnx-web</a></td>
-                <td><a href='t3-p4gqa.html' title="onnx-community/Phi-4-mini-instruct-ONNX-GQA">Phi-4-mini-instruct-ONNX-GQA</a></td>
-                <td><a href='t3-p4mha.html' title="onnx-community/Phi-4-mini-instruct-ONNX-MHA">Phi-4-mini-instruct-ONNX-MHA</a></td>
-            </tr>
-            <tr>
-                <td>v4</td>
-                <td>1.24.0-dev.20251104-75d35474d5 (WebGPU EP)</td>
-                <td><a href='t4-p35.html' title="onnx-community/Phi-3.5-mini-instruct-onnx-web">Phi-3.5-mini-instruct-onnx-web</a></td>
-                <td><a href='t4-p4gqa.html' title="onnx-community/Phi-4-mini-instruct-ONNX-GQA">Phi-4-mini-instruct-ONNX-GQA</a></td>
-                <td><a href='t4-p4mha.html' title="onnx-community/Phi-4-mini-instruct-ONNX-MHA">Phi-4-mini-instruct-ONNX-MHA</a></td>
-            </tr>
-        </tbody>
-    </table>
+
+  <div id="result">Please wait util the result returns, or open the Developer Tools to check the status / progress</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Transformers.js</th>
+        <th>ONNX Runtime Web</th>
+        <th colspan="3">WebGPU - Phi Mini Test</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>3.7.6</td>
+        <td>1.22.0-dev.20250409-89f8206ba4 (Legacy JSEP)</td>
+        <td><a href='t3-p35.html'
+            title="onnx-community/Phi-3.5-mini-instruct-onnx-web">Phi-3.5-mini-instruct-onnx-web</a></td>
+        <td><a href='t3-p4gqa.html' title="onnx-community/Phi-4-mini-instruct-ONNX-GQA">Phi-4-mini-instruct-ONNX-GQA</a>
+        </td>
+        <td><a href='t3-p4mha.html' title="onnx-community/Phi-4-mini-instruct-ONNX-MHA">Phi-4-mini-instruct-ONNX-MHA</a>
+        </td>
+      </tr>
+      <tr>
+        <td>v4</td>
+        <td>1.24.0-dev.20251104-75d35474d5 (WebGPU EP)</td>
+        <td><a href='t4-p35.html'
+            title="onnx-community/Phi-3.5-mini-instruct-onnx-web">Phi-3.5-mini-instruct-onnx-web</a></td>
+        <td><a href='t4-p4gqa.html' title="onnx-community/Phi-4-mini-instruct-ONNX-GQA">Phi-4-mini-instruct-ONNX-GQA</a>
+        </td>
+        <td><a href='t4-p4mha.html' title="onnx-community/Phi-4-mini-instruct-ONNX-MHA">Phi-4-mini-instruct-ONNX-MHA</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 <script type="module">
   import { pipeline } from "./transformers.js-dist/3.7.6/transformers.min.js";

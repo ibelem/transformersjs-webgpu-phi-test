@@ -6,6 +6,11 @@
             padding-top: 50px;
             margin: 0;
         }
+        #result {
+          margin: 1rem;
+          padding: 1rem;
+          border: 1px solid #009879;
+        }
         table {
             border-collapse: collapse;
             margin: 25px 0;
@@ -15,6 +20,7 @@
             background-color: white;
             border-radius: 8px;
             overflow: hidden;
+            font-size: 0.8rem;
         }
         table thead tr {
             background-color: #009879;
