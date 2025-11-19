@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <title>Transformers.js 3.7.6 / ORT Web 1.22.0-dev.20250409 / Phi-3.5-mini-instruct-onnx-web</title>
+</head>
+
+<body>
+  <h3>Transformers.js 3.7.6 / ORT Web 1.22.0-dev.20250409 / Phi-3.5-mini-instruct-onnx-web</h3>
+  <div>
+    Result: <div id="result"></div>
+  </div>
+  <table>
+    <tr>
+      <th>Transformers.js</th>
+      <th>ONNX Runtime Web</th>
+      <th>WebGPU - Phi Mini Test</th>
+    </tr>
+    <tr>
+      <td>3.7.6</td>
+      <td>1.22.0-dev.20250409-89f8206ba4 (Legacy JSEP)</td>
+      <td><a href='t3-p35.html'>onnx-community/Phi-3.5-mini-instruct-onnx-web</a></td>
+      <td><a href='t3-p4gqa.html'>onnx-community/Phi-4-mini-instruct-ONNX-GQA</a></td>
+      <td><a href='t3-p4mha.html'>onnx-community/Phi-4-mini-instruct-ONNX-MHA</a></td>
+    </tr>
+    <tr>
+      <td>v4</td>
+      <td>1.24.0-dev.20251104-75d35474d5 (WebGPU EP)</td>
+      <td><a href='t4-p35.html'>onnx-community/Phi-3.5-mini-instruct-onnx-web</a></td>
+      <td><a href='t4-p4gqa.html'>onnx-community/Phi-4-mini-instruct-ONNX-GQA</a></td>
+      <td><a href='t4-p4mha.html'>onnx-community/Phi-4-mini-instruct-ONNX-MHA</a></td>
+    </tr>
+  </table>
+</body>
+<script type="module">
+  import { pipeline } from "./transformers.js-dist/3.7.6/transformers.min.js";
+
+  // Create a text generation pipeline
+  const generator = await pipeline(
+    "text-generation",
+    "onnx-community/Phi-3.5-mini-instruct-onnx-web",
+    {
+      device: 'webgpu',
+      dtype: 'q4f16',
+      session_options: {
+        logSeverityLevel: 0
+      },
+    }
+  );
+
+  // Define the list of messages
+  const messages = [
+    { role: "system", content: "You are a helpful assistant." },
+    { role: "user", content: "Solve the equation: x^2 + 2x - 3 = 0" },
+  ];
+
+  // Generate a response
+  const output = await generator(messages, { max_new_tokens: 256, do_sample: false });
+  document.querySelector('#result').innerHTML = output[0].generated_text.at(-1).content;
+  console.log(output[0].generated_text.at(-1).content);
+</script>
+
+</html>
