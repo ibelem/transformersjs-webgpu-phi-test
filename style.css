@@ -7,11 +7,20 @@
             margin: 0;
             padding: 1rem;
         }
-        #result {
+        .test {
           margin: 1rem 0;
           padding: 1rem;
           border: 1px solid #009879;
         }
+
+        #question {
+          font-style: italic;
+        }
+
+        #result {
+          margin-top: 0.5rem;
+        }
+
         table {
             border-collapse: collapse;
             margin: 1rem 0;
