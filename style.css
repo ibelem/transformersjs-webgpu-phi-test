@@ -36,7 +36,7 @@
         }
 
         .log {
-          padding: 1rem;
+          padding: 1rem 0;
           border: 1px solid red;
           font-family: 'Courier New', Courier, monospace;
           font-size: 0.7rem;

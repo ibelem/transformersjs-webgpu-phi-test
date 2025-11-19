@@ -16,14 +16,18 @@
   </div>
 
   <pre class="log">
-    Uncaught Error: Can't create a session. ERROR_CODE: 6, ERROR_MESSAGE: Data of TensorProto ( tensor name: ) should be stored in model_q4f16.onnx_data_1, but it is not regular file.
-    at qe (ort.webgpu.bundle.min.mjs:10:29316)
-    at Yt (ort.webgpu.bundle.min.mjs:11:23160)
-    at async xr.loadModel (ort.webgpu.bundle.min.mjs:11:36036)
-    at async Er.createInferenceSessionHandler (ort.webgpu.bundle.min.mjs:11:37769)
-    at async e.create (ort.webgpu.bundle.min.mjs:6:19907)
-    at async g (onnx.js:153:11)
-    at async models.js:359:25
+  ort.webgpu.bundle.min.mjs:10 
+  Uncaught Error: Can't create a session. ERROR_CODE: 6, ERROR_MESSAGE: Data of TensorProto ( tensor name: ) should be stored in model_q4f16.onnx_data_1, but it is not regular file.
+      at qe (ort.webgpu.bundle.min.mjs:10:29316)
+      at Yt (ort.webgpu.bundle.min.mjs:11:23160)
+      at async xr.loadModel (ort.webgpu.bundle.min.mjs:11:36036)
+      at async Er.createInferenceSessionHandler (ort.webgpu.bundle.min.mjs:11:37769)
+      at async e.create (ort.webgpu.bundle.min.mjs:6:19907)
+      at async g (onnx.js:153:11)
+      at async models.js:359:25
+      at async Promise.all (index 0)
+      at async z (models.js:349:19)
+      at async Promise.all (index 0)
   </pre>
   
   <table>
@@ -42,7 +46,7 @@
             title="onnx-community/Phi-3.5-mini-instruct-onnx-web">Phi-3.5-mini-instruct-onnx-web</a> <span class="pass">PASS</span></td>
         <td><a href='t3-p4gqa.html' title="onnx-community/Phi-4-mini-instruct-ONNX-GQA">Phi-4-mini-instruct-ONNX-GQA</a> <span class="error">Uncaught 11078672</span>
         </td>
-        <td><a href='t3-p4mha.html' title="onnx-community/Phi-4-mini-instruct-ONNX-MHA">Phi-4-mini-instruct-ONNX-MHA</a> <span class="error"></span>Uncaught 12922160</span>
+        <td><a href='t3-p4mha.html' title="onnx-community/Phi-4-mini-instruct-ONNX-MHA">Phi-4-mini-instruct-ONNX-MHA</a> <span class="error">Uncaught 12922160</span>
         </td>
       </tr>
       <tr>
